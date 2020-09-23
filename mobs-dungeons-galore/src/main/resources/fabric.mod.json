@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "mobsdungeonsgalore",
+  "version": "1.0.0",
+
+  "name": "Mobs Dungeons Galore",
+  "description": "Mobs! Dungeons! Galore!",
+  "authors": [
+    "OrganicApple"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/mobsdungeonsgalore/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.mobsdungeonsgalore.MobsDungeonsGaloreMain"
+    ],
+	"client": [
+	  "net.mobsdungeonsgalore.MobsDungeonsGaloreClient"
+	]
+  },
+  "mixins": [
+    "mobsdungeonsgalore.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
