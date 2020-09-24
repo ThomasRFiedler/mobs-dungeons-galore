@@ -12,8 +12,8 @@ import net.mobsdungeonsgalore.entity.GiantLizardEntity;
 public class EntityInit {
 	
 	public static final EntityType<GiantLizardEntity> GIANTLIZARD_ENTITY = FabricEntityTypeBuilder
-			.create(SpawnGroup.MONSTER,GiantLizardEntity::new)
-			.dimensions(EntityDimensions.fixed(1.5F,1.5F)).build();
+			.create(SpawnGroup.CREATURE,GiantLizardEntity::new)
+			.dimensions(EntityDimensions.fixed(1.5F,1.0F)).build();
 	
 	public static void Init()
 	{
