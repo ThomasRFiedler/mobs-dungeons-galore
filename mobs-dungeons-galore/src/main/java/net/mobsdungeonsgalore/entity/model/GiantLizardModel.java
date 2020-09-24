@@ -6,12 +6,24 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.minecraft.client.model.ModelPart;
 import net.minecraft.client.render.entity.model.CompositeEntityModel;
+import net.minecraft.util.math.MathHelper;
 import net.mobsdungeonsgalore.entity.GiantLizardEntity;
 
 @Environment(EnvType.CLIENT)
 public class GiantLizardModel<T extends GiantLizardEntity> extends CompositeEntityModel<T>
 {	
-	body = (new ModelPart(this).setTextureSize(128,128));
+	private final ModelPart head;
+	private final ModelPart body;
+	private final ModelPart leftLeg;
+	private final ModelPart leftArm;
+	private final ModelPart rightArm;
+	private final ModelPart rightLeg;
+	private final ModelPart tail;
+	private final ModelPart jaw;
+	
+	public GiantLizardModel() {
+		
+		body = (new ModelPart(this).setTextureSize(128,128));
 		body.setPivot(0.0F, 13.0F, 1.4828F);
 		body.setTextureOffset(0, 23).addCuboid(-7.0F, -5.0F, -9.9655F, 14.0F, 11.0F, 10.0F, 0.0F, false);
 		body.setTextureOffset(0, 0).addCuboid(-8.0F, -6.0F, 0.0345F, 16.0F, 13.0F, 10.0F, 0.0F, false);
@@ -71,7 +83,7 @@ public class GiantLizardModel<T extends GiantLizardEntity> extends CompositeEnti
 	@Override
 	public void setAngles(T entity, float limbAngle, float limbDistance, float animationProgress, float headYaw, float headPitch) 
 	{
-	    this.head.pitch = headPitch * 0.017453292F;
+		this.head.pitch = headPitch * 0.017453292F;
 	    this.head.yaw = headYaw * 0.017453292F;
 	    this.rightLeg.pitch = MathHelper.cos(limbAngle * 0.6662F) * 1.4F * limbDistance;
 	    this.leftLeg.pitch = MathHelper.cos(limbAngle * 0.6662F + 3.1415927F) * 1.4F * limbDistance;
@@ -79,11 +91,4 @@ public class GiantLizardModel<T extends GiantLizardEntity> extends CompositeEnti
 	    this.leftArm.pitch = MathHelper.cos(limbAngle * 0.6662F) * 1.4F * limbDistance;
 		
 	}
-
-
-
-
-	
-
-
 }
