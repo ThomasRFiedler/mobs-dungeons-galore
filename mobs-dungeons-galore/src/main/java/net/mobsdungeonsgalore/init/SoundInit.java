@@ -7,7 +7,7 @@ import net.minecraft.util.registry.Registry;
 public class SoundInit 
 {
 	
-	public static final Identifier ENTITY_GIANTLIZARD_DEATH_ID = new Identifier("mobsdungeonsgalore:entity.giantlizard.death");
+    public static final Identifier ENTITY_GIANTLIZARD_DEATH_ID = new Identifier("mobsdungeonsgalore:entity.giantlizard.death");
     public static SoundEvent ENTITY_GIANTLIZARD_DEATH = new SoundEvent(ENTITY_GIANTLIZARD_DEATH_ID);
     
     public static final Identifier ENTITY_GIANTLIZARD_HURT_ID = new Identifier("mobsdungeonsgalore:entity.giantlizard.hurt");
