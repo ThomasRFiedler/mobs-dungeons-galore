@@ -1,0 +1,23 @@
+{
+	"entity.giantlizard.death": 
+	{
+		"sound": 
+		[
+			"mobsdungeonsgalore:giantlizard_death"
+		]
+	},
+	"entity.giantlizard.hurt": 
+	{
+		"sound": 
+		[
+			"mobsdungeonsgalore:giantlizard_hurt"
+		]
+	},
+	"entity.giantlizard.ambient": 
+	{
+		"sound": 
+		[
+			"mobsdungeonsgalore:giantlizard_ambient"
+		]
+	}
+}
