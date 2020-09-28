@@ -1,8 +1,6 @@
 package net.mobsdungeonsgalore.entity;
 import java.util.UUID;
 
-import org.eclipse.jdt.annotation.Nullable;
-
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.Durations;
 import net.minecraft.entity.ai.goal.AnimalMateGoal;
@@ -110,14 +108,14 @@ public class GiantLizardEntity extends TameableEntity implements Angerable {
 		
 	}
 
-	@Override @Nullable
+	@Override
 	public UUID getAngryAt() 
 	{
 		return this.targetUuid;
 	}
 	
 	@Override
-	public void setAngryAt(@Nullable UUID uuid) 
+	public void setAngryAt(UUID uuid)
 	{
 	      this.targetUuid = uuid;
 	}

@@ -8,6 +8,7 @@ import net.minecraft.entity.SpawnGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.mobsdungeonsgalore.entity.GiantLizardEntity;
+import net.mobsdungeonsgalore.entity.ThatThingEntity;
 import net.mobsdungeonsgalore.entity.TrollEntity;
 
 public class EntityInit 
@@ -19,15 +20,19 @@ public class EntityInit
 	public static final EntityType<TrollEntity> TROLL_ENTITY = FabricEntityTypeBuilder
 			.create(SpawnGroup.MONSTER,TrollEntity::new)
 			.dimensions(EntityDimensions.fixed(1.0F, 2.5F)).build();
+	public static final EntityType<ThatThingEntity> THATTHING_ENTITY = FabricEntityTypeBuilder
+			.create(SpawnGroup.MONSTER,ThatThingEntity::new)
+			.dimensions(EntityDimensions.fixed(1.0F,2.5F)).build();
 	
 	public static void Init()
 	{
 		Registry.register(Registry.ENTITY_TYPE, new Identifier("mobsdungeonsgalore","giant_lizard"), GIANTLIZARD_ENTITY);
 		Registry.register(Registry.ENTITY_TYPE, new Identifier("mobsdungeonsgalore","troll"), TROLL_ENTITY);
-		
+		Registry.register(Registry.ENTITY_TYPE, new Identifier("mobsdungeonsgalore","thatthing"), THATTHING_ENTITY);
 		
 		FabricDefaultAttributeRegistry.register(GIANTLIZARD_ENTITY, GiantLizardEntity.createGiantLizardAttributes());
 		FabricDefaultAttributeRegistry.register(TROLL_ENTITY, TrollEntity.createTrollAttributes());
+		FabricDefaultAttributeRegistry.register(THATTHING_ENTITY, ThatThingEntity.createThatThingAttributes());
 	}
 
 }
